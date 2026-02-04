@@ -7,12 +7,12 @@ https://luizanunciato.github.io/Landing-Page---Food/
 
 
 # 🛠️ Technologies Used
-HTML5: Semantic markup
-CSS3: Styling
-JavaScript: Interactive functionality
-jQuery: DOM manipulation and event handling
-ScrollReveal: Scroll animations
-Font Awesome: Icons
-Google Fonts: Fonts
+HTML5: Marcação semântica
+CSS3: Estilização
+JavaScript: Funcionalidade interativa
+jQuery: Manipulação DOM e manipulação de eventos
+ScrollReveal: Animações de scroll
+Font Awesome: Ícones
+Google Fonts: Fontes
 
 
