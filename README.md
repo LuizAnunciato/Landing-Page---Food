@@ -2,7 +2,8 @@
 
 This is a test restaurant landing page created to practice and improve my skills.
 
-#View the project:
+# View the project:
+
 https://luizanunciato.github.io/Landing-Page---Food/
 
 # 🛠️ Technologies Used
