@@ -1,0 +1,82 @@
+#menu { /*Menu Geral*/
+    display: flex; /*Ferramenta - Alinhar*/
+    flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    justify-content: center; /*Centralizar na tela*/
+    min-height: 100vh;
+} 
+
+#dishes { /*Pratos*/
+    width: 100%; /*Largura*/
+    display: flex; /*Ferramenta - Alinhar*/
+    justify-content: center; /*Centralizar na tela*/
+    gap: 24px; /*Espaço entre os elementos*/
+    margin-top: 32px; /*Margem - Espaço externo do elemento*/
+}
+
+.dish { /*Prato 1-2-3-4*/
+    display: flex; /*Ferramenta - Alinhar*/
+    flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    border-radius: 20px; /*Arredondar a borda*/
+    gap: 18px; /*Espaço entre os elementos*/
+    width: 25%; /*Largura*/
+    padding: 20px; /*Espaço interno do elemento*/
+    background-color: var(--color-neutral-0); /*Cor do fundo*/
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1); /*Sombra*/
+    position: relative; /*Referência*/
+    overflow: hidden;
+}
+
+.dish-heart { /*Icone - Coração*/
+    position: absolute; /*Manter em cima*/
+    background-color: var(--color-primary-6); /*Cor 6*/
+    display: flex; /*Ferramenta - Alinhar*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    justify-content: center; /*Centralizar na tela*/
+    font-size: 1.563rem; /*Tamanho da fonte*/
+    color: var(--color-primary-1); /*Cor*/
+    width: 70px; /*Largura*/
+    height: 70px; /*Altura*/
+    right: -10px; /*Posiciona a direita*/
+    top: -10px; /*Distância do topo*/
+    border-radius: 0px 37.5px 0px 42.5px; /*Arredondar a borda*/
+}
+
+.dish-description { /*Descrição*/
+    color: #434343; /*Cor*/
+    text-align: center; /*Alinha o conteúdo interno de um bloco no centro*/
+}
+
+.dish-rate i { /*Ícone - Estrelas*/
+    color: var(--color-primary-6); /*Cor 6*/
+}
+
+.dish-price { /*Preço*/
+    display: flex; /*Ferramenta - Alinhar*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    gap: 20px; /*Espaço entre os elementos*/
+}
+
+/*Responsividade - @media*/
+@media screen and (max-width: 1170px) {
+    #dishes { /*Pratos*/
+        flex-wrap: wrap; /*Quebra linha*/
+        justify-content: center; /*Alinha no centro*/
+    }
+
+    .dish { /*Prato*/
+        width: calc(50% - 12px); /*Largura - calculo para ajustar/quebrar*/
+    }
+
+    /*Ajuste para quebrar quando chegar aos 600px*/
+    @media screen and (max-width: 600px) {
+        .dish {
+            width: 100% /*Largura*/
+        }
+    }
+
+    #menu .section-subtitle {
+        text-align: center; /*Alinha o conteúdo interno de um bloco no centro*/
+    }
+}

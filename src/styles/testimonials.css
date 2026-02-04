@@ -1,0 +1,94 @@
+/*Avaliações*/
+
+#testimonials { /*Sessão avaliações*/
+    min-height: calc(100vh - 91px); /*Altura mínima*/
+    display: flex; /*Ferramenta - Alinha horizontalmente por padrão*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    justify-content: center; /*Posicionado na direita*/
+    gap: 48px; /*Espaço entre os elementos*/
+}
+
+#testimonial_chef { /*Imagem chef*/
+    width: 500px; /*Largura*/
+    height: auto; /*Altura*/
+}
+
+#testimonials .section-subtitle { /*Acessando o ID da sessão e a CLASSE do subtitulo para modificar somente*/
+    font-size: 3rem; /*Tamanho da fonte*/
+}
+
+#testimonials_content { /*Conteúdo dos depoimentos*/
+    width: 50%; /*Largura*/
+}
+
+#feedbacks { /*Feedbacks (Caixa geral)*/
+    display: flex; /*Ferramenta - Alinha horizontalmente por padrão*/
+    flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+    gap: 20px; /*Espaço entre os elementos*/
+    margin-bottom: 40px; /*Espaço entre os elementos e o botão*/
+    margin-top: 30px; /*Margem - Espaço externo do elemento*/
+}
+
+.feedback { /*Feedback*/
+    display: flex; /*Ferramenta - Alinha horizontalmente por padrão*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    gap: 20px; /*Espaço entre os elementos*/
+    background-color: var(--color-neutral-0); /*Cor do fundo*/
+    padding: 12px; /*Espaço interno do elemento*/
+    border-radius: 12px; /*Arredondar a borda*/
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1); /*Sombra*/
+} 
+
+.feedback-avatar { /*Imagem do avatar*/
+    width: 100px; /*Largura*/
+    height: 100px; /*Altura*/
+    object-fit: cover;
+    border-radius: 50%; /*Arredondar a borda*/
+}
+
+.feedback-content p { /*Alinhando e gerando espaço entre o nome e as estrelas*/
+    display: flex; /*Ferramenta - Alinha horizontalmente por padrão*/
+    justify-content: space-between; /*Espaço entre elementos*/
+}
+
+.feedback-content p span { /*Alterar a cor das estrelas*/
+    color: var(--color-primary-6); /*Cor*/
+}
+
+/*Responsividade - @media*/
+@media screen and (max-width: 1170px) {
+    #testimonials { /*Avaliações*/
+        flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+    }
+
+    #testimonials_content .section-subtitle { /*Se a tela for menor que 1170px, alinhe o conteúdo no centro + altere o tamanho da fonte*/
+        text-align: center; /*Alinha o conteúdo interno de um bloco no centro*/
+        font-size: 2.5rem; /*Tamanho da fonte*/
+    }
+
+    #testimonial_chef { /*Se a tela for menor que 1170px, remova a imagem do chef do layout*/
+        display: none; /*Esconde o elemento da tela (Imagem do Chef)*/
+    } 
+
+    #testimonials_content { /*Avaliações*/
+        width: 70%; /*Largura*/
+        display: flex; /*Ferramenta - Alinha horizontalmente por padrão*/
+        flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+        align-items: center; /*Alinha os elementos no centro vertical*/
+    }
+}
+
+/*Responsividade - @media*/
+@media screen and (max-width: 600px) { /*Se a tela for menor que 600px, faça...*/
+     #testimonials_content .section-subtitle {
+        font-size: 2rem; /*Tamanho da fonte*/
+    }
+
+    #testimonials_content {
+        width: 100%; /*Largura*/
+    }
+
+    .feedback { 
+        flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+    }
+}

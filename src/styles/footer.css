@@ -1,0 +1,25 @@
+/*Footer*/
+
+footer {
+    background-color: var(--color-primary-2); /*Cor do fundo*/
+}
+
+#footer_items {
+    display: flex; /*Ferramenta - Alinhar*/
+    justify-content: space-between; /*Empurrar os itens para as extremidades*/
+    padding: 0px 8% 24px 8%; /*Espaço interno do elemento*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+}
+
+#copyright { /*Copyright - © 2026 Anunciatto*/
+    color: var(--color-neutral-1); /*Cor*/
+    font-weight: 500; /*Grossura da fonte*/
+}
+
+/*Responsividade - @media*/
+@media screen and (max-width: 600px) {
+    #footer_items { /*Items do rodapé*/
+        flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+        gap: 20px; /*Espaço entre os elementos*/
+    }
+}

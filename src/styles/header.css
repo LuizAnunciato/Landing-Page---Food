@@ -1,0 +1,96 @@
+/*Navbar*/
+
+header {
+    width: 100%; /*Largura*/
+    padding: 28px 8%; /*Espaço interno do elemento*/
+    position: sticky; /*Trava*/
+    top: 0; /*Topo*/
+    background-color: var(--color-primary-1); /*Cor do fundo*/
+    z-index: 3;
+}
+
+#navbar {
+    width: 100%; /*Largura*/
+    display: flex; /*Ferramenta - Alinhar*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    justify-content: space-between; /*Empurrar os itens para as extremidades*/
+}
+
+/*Customizar a logo*/
+#nav_logo {
+    font-size: 24px; /*Aumentar o tamanho*/
+    color: var(--color-primary-6); /*Cor*/
+    display: flex; /* Transforma em flex para alinhar o ícone e o texto lado a lado */
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    gap: 8px; /*Espaço entre os elementos*/
+    cursor: default; /* Logo geralmente não mostra a 'mãozinha' a menos que seja um link */
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500; /*Grossura da fonte*/
+}
+
+/*Páginas*/
+#nav_list {
+    display: flex; /*Ferramenta - Alinhar*/
+    list-style: none;
+    gap: 48px; /*Espaço entre os elementos*/
+}
+
+/*Link - Páginas*/
+.nav-item a {
+    text-decoration: none; /*Remover linhas*/
+    color: #1d1d1dad; /*Cor*/
+    font-weight: 600; /*Grossura da fonte*/
+}
+
+.nav-item.active a {
+    color: var(--color-neutral-1); /*Cor*/
+    border-bottom: 3px solid var(--color-primary-4); /*Cor 4*/
+}
+
+/*Mobile botão - três barrinhas*/
+#mobile_btn {
+    display: none; /*Esconde o elemento da tela (Botão 3 barrinhas)*/
+}
+
+/*Mobile menu*/
+#mobile_menu {
+    display: none; /*Esconde o elemento da tela (Menu)*/
+}
+
+/*Responsividade - @media*/
+@media screen and (max-width: 1170px) {
+    #nav_list, 
+    #navbar .btn-default {
+        display: none; /*Esconde o elemento da tela*/
+    }
+
+    /*Botão mobile (Três barrinhas)*/
+    #mobile_btn {
+        display: block; /*Elemento ocupe toda a largura disponível da linha e seja empurrado para linha de baixo*/
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+/*Classe para entrar no botão de três barrinhas e acessar o menu no mobile*/
+#mobile_menu.active {
+    display: flex; /*Ferramenta - Alinhar*/
+    flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    }
+
+    /*Lista no mobile*/
+    #mobile_nav_list {
+        display: flex; /*Ferramenta - Alinhar*/
+        flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+        gap: 12px; /*Espaço entre os elementos*/
+        margin: 12px 0px; /*Margem - Espaço externo do elemento*/
+    }
+
+    /*Remover os marcadores separadamente/acessando o conteúdo do #mobile_nav_list através do #mobile_nav_list .nav-item */
+    #mobile_nav_list .nav-item {
+        list-style: none; /*Remover os marcadores automáticos da lista*/
+        text-align: center; /*Alinha o conteúdo interno de um bloco no centro*/
+    }
+}

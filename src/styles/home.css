@@ -1,0 +1,101 @@
+#home {
+    display: flex; /*Ferramenta - Alinhar*/
+    min-height: calc(100vh - 91px); /*Página terá uma altura mínima*/
+    position: relative;
+}
+
+#cta {
+    width: 35%; /*Largura*/
+    display: flex; /*Ferramenta - Alinhar*/
+    flex-direction: column; /*Ferramenta - Alinha verticalmente*/
+    gap: 28px; /*Espaço entre os elementos*/
+    margin-top: 5%; 
+}
+
+#cta .title { /*Título*/
+    font-size: 4rem;
+    color: var(--color-neutral-1); /*Cor 8*/
+}
+
+#cta .title span { /*Letra do título em amarelo (você)*/
+    color: var(--color-primary-6);
+}
+
+#cta .description { /*Descrição*/
+    font-size: 1.2rem;
+}
+
+#cta_buttons { /*Botões - Ver cardápio e Telefone*/
+    display: flex; /*Ferramenta - Alinhar*/
+    gap: 24px; /*Espaço entre os elementos*/
+}
+
+#cta_buttons a { /*Botões - Personalizar o Hiperlink*/
+    text-decoration: none; /*Retirar o sublinhado dos links*/
+    color: var(--color-neutral-1); /*Cor*/
+}
+
+#phone_button {
+    display: flex; /*Ferramenta - Alinhar*/
+    gap: 8px; /*Espaço entre os elementos*/
+    align-items: center; /*Alinha os elementos no centro vertical*/
+    background-color: var(--color-neutral-0); /*Cor*/
+    padding: 8px 14px; /*Espaço interno do elemento*/
+    font-weight: 500; /*Negrito*/
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1); /*Sombra*/
+    border-radius: 12px; /*Arredondar a borda*/
+}
+
+#phone_button button {
+    box-shadow: none; /*Remover sombra*/
+}
+
+#banner { /*Posicionando a imagem*/
+    display: flex; /*Ferramenta - Alinhar*/
+    align-items: start; /*Alinha os elementos em cima*/
+    justify-content: end; /*Posicionado na direita*/
+    width: 70%; /*Largura*/
+    z-index: 2; /*Sobreposição*/
+}
+
+#banner img { /*Editando a imagem (altura e largura)*/
+    height: 100%; /*Altura*/
+    width: fit-content; /*Largura*/
+}
+
+.shape { /*Forma geométrica atrás do banner*/
+    background-color: var(--color-primary-2); /*Cor de fundo*/
+    width: 50%; /*Largura*/
+    height: 100%; /*Altura*/
+    position: absolute;
+    border-radius: 40% 30% 0% 20%; /*Arredondar a borda*/
+    top: 0; /*Posição vertical*/
+    right: 0; /*Posição horizontal*/
+    z-index: 1; /*Sobreposição*/
+}
+
+/*Responsividade - @media*/
+@media screen and (max-width: 1170px) { 
+    #home { /*Início*/
+        min-height: 100%; /*Altura mínima*/
+        padding-top: 0px; /*Espaço interno do elemento*/
+    }
+
+    #banner, /*Removendo o banner para mobile*/
+    #banner img, /*Removendo a imagem do banner para mobile*/
+    #home .shape { /*Removendo a forma geométrica*/
+        display: none; /*Esconde o elemento da tela (Banner e a forma geométrica)*/
+    }
+
+    #cta {
+        width: 100%; /*Largura*/
+        text-align: center; /*Alinha o conteúdo interno de um bloco no centro*/
+        align-items: center; /*Alinha os elementos no centro vertical*/
+    }
+}
+
+@media screen and (max-width: 450px) { /*Responsividade do botão telefone*/
+    #phone_button button { 
+        display: none; /*Esconde o elemento da tela (Botão do telefone*/
+    }
+}
