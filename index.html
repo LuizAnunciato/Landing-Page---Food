@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/> <!--Link - font awesome-->
+    <link rel="stylesheet" href="src/styles/styles.css"> <!--Link - Styles (Geral)-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!--Link - jquery cdn-->
+    <script src="https://unpkg.com/scrollreveal"></script> <!--Link - Biblioteca de animações - ScrollReveal-->
+    <title>Landing Page - Food</title>
+</head>
+<body> <!-- Corpo do texto -->
+    <header> <!--Tag header - Topo de uma página-->
+        <nav id="navbar">
+            <div id="nav_logo">
+                <i class="fa-solid fa-burger"></i>
+                <span>FOOD</span>
+            </div>
+
+            <ul id="nav_list"> <!--Tag Lista-->
+                <li class="nav-item active"> <!--Identificador que você atribui a um ou mais elementos HTML-->
+                    <a href="#home">Início</a> <!--Link-->
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a> <!--Link-->
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Feedback</a> <!--Link-->
+                </li>
+            </ul>
+
+            <button class="btn-default"> <!--Botão padrão do sistema (vai aparecer em diversos lugares)-->
+                Peça aqui
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i> <!--Botão para mobile-->
+            </button>
+
+        </nav> <!--Tag navbar - Logo, itens do menu e botão - Id de identificação-->
+
+        <div id="mobile_menu"> <!--Menu mobile-->
+            <ul id="mobile_nav_list"> <!--Tag Lista-->
+                <li class="nav-item"> <!--Identificador que você atribui a um ou mais elementos HTML-->
+                    <a href="#home">Início</a> <!--Hiperlink-->
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Feedback</a>
+                </li>
+            </ul>
+
+            <button class="btn-default"> <!--Botão padrão do sistema-->
+                Peça aqui
+            </button>
+            
+        </div>
+    </header>
+
+    <!--Conteúdo--> <!--Analogia-->
+    <main id="content"> <!--Todo nosso conteúdo - Sessões de inicio, cardapio e feedback--> <!--Main (Terreno)-->
+        <section id="home"> <!--inicio--> <!--Section (Cômodo da casa)-->
+            <div class="shape"></div>
+            <div id="cta"> <!--Div (Sofá)-->
+                <h1 class="title"> <!--Classe título-->
+                    O sabor que vai até <!--Título-->
+                    <span>você</span> <!--Parte amarela do título-->
+                </h1>
+
+                <p class="description"> <!--Classe descrição-->
+                    Bateu aquela fome? Peça agora e sinta o sabor único que só a gente tem. O seu prato favorito está a apenas alguns cliques de distância. <!--Descrição-->
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default"> <!--Botão/Link - Ver Cardápio-->
+                        Ver Cardápio 
+                    </a> 
+
+                    <a href="tel: +5555555555" id="phone_button"> <!--Botão/Link - Telefone-->
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i> <!--Ícone do Telefone-->
+                        </button>
+                        (51) 987786557
+                    </a>
+                </div>
+
+                <div class="social-media-buttons"> <!--Ícone - Social-->
+                    <a href="https://wa.me/5551987786557"> <!--Link - WhatsApp-->
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a> 
+
+                    <a href=""> <!--Link - Instagram-->
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    
+                    <a href=""> <!--Link - Facebook-->
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="src/images/hero.png" alt=""> <!--Link - Imagem-->
+            </div>
+        </section>
+
+        <section id="menu"> <!--Menu-->
+            <h2 class="section-title">Cardápio</h2> <!--Titulo - Cardápio-->
+            <h3 class="section-subtitle">Nossos pratos especiais</h3> <!--Subtitulo - Pratos-->
+
+            <div id="dishes"> <!--Pratos-->
+                <div class="dish"> <!--Prato 1-->
+                    <div class="dish-heart"> <!--Icone - Coração-->
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/dish.png" class="dish-image" alt=""> <!--Link - Imagem dish-->
+
+                    <h3 class="dish-title"> <!--Nome do prato-->
+                        Bowl oriental
+                    </h3>
+
+                    <span class="dish-description"> <!--Descrição do prato-->
+                        Bowl oriental com camarões grelhados, peixe empanado, vegetais frescos e tomate cereja.
+                    </span>
+
+                    <div class="dish-rate"> <!--Icone estrela-->
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span> <!--Avaliações-->
+                    </div>
+
+                    <div class="dish-price"> <!--Preço do prato-->
+                        <h4>R$ 65,00</h4> 
+                        <button class="btn-default"> <!--Botão padrão-->
+                            <i class="fa-solid fa-basket-shopping"></i> <!--Icone carrinho supermercado-->
+                        </button>
+                    </div> 
+                        
+                </div>
+
+                <div class="dish"> <!--Prato 2-->
+                    <div class="dish-heart"> <!--Icone - Coração-->
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/dish2.png" class="dish-image" alt=""> <!--Link - Imagem dish-->
+
+                    <h3 class="dish-title"> <!--Nome do prato-->
+                        Toast Especial de Frango
+                    </h3>
+
+                    <span class="dish-description"> <!--Descrição do prato-->
+                        Sanduíche no pão artesanal tostado, recheado com frango desfiado, queijo derretido
+                    </span>
+
+                    <div class="dish-rate"> <!--Icone estrela-->
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span> <!--Avaliações-->
+                    </div>
+
+                    <div class="dish-price"> <!--Preço do prato-->
+                        <h4>R$ 32,00</h4> 
+                        <button class="btn-default"> <!--Botão padrão-->
+                            <i class="fa-solid fa-basket-shopping"></i> <!--Icone carrinho supermercado-->
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="dish"> <!--Prato 3-->
+                    <div class="dish-heart"> <!--Icone - Coração-->
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/dish3.png" class="dish-image" alt=""> <!--Link - Imagem dish-->
+
+                    <h3 class="dish-title"> <!--Nome do prato-->
+                        Green Smoothie Bowl.
+                    </h3>
+
+                    <span class="dish-description"> <!--Descrição do prato-->
+                        Creme de espinafre e frutas tropicais, com morango, fatias de kiwi, coco em lascas e sementes de girassol.
+                    </span>
+
+                    <div class="dish-rate"> <!--Icone estrela-->
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span> <!--Avaliações-->
+                    </div>
+
+                    <div class="dish-price"> <!--Preço do prato-->
+                        <h4>R$ 48,00</h4> 
+                        <button class="btn-default"> <!--Botão padrão-->
+                            <i class="fa-solid fa-basket-shopping"></i> <!--Icone carrinho supermercado-->
+                        </button>
+                    </div> 
+                </div>
+
+                <div class="dish"> <!--Prato 4-->
+                    <div class="dish-heart"> <!--Icone - Coração-->
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <img src="src/images/dish4.png" class="dish-image" alt=""> <!--Link - Imagem dish-->
+
+                    <h3 class="dish-title"> <!--Nome do prato-->
+                        Yakisoba de Camarão.
+                    </h3>
+
+                    <span class="dish-description"> <!--Descrição do prato-->
+                        Macarrão artesanal com camarões grelhados, brócolis fresco, pimentões e tomates cereja, finalizado com cebolinha.
+                    </span>
+
+                    <div class="dish-rate"> <!--Icone estrela-->
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span> <!--Avaliações-->
+                    </div>
+
+                    <div class="dish-price"> <!--Preço do prato-->
+                        <h4>R$ 58,00</h4>
+                        <button class="btn-default"> <!--Botão padrão-->
+                            <i class="fa-solid fa-basket-shopping"></i> <!--Icone carrinho supermercado-->
+                        </button>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials"> <!--Sessão avaliações-->
+            <img src="src/images/chef.png" id="testimonial_chef" alt=""> <!--Imagem-->
+
+            <div id="testimonials_content">
+                <h2 class="section-title"> <!--Título-->
+                    Depoimentos
+                </h2>
+                <h3 class="section-subtitle"> <!--Subtitulo-->
+                    O que os clientes falam sobre nós
+                </h3>
+                <div id="feedbacks"> <!--Feedbacks-->
+                    <div class="feedback"> <!--Feedback 1-->
+                        <img src="src/images/avatar1.png" class="feedback-avatar" alt=""> <!--Imagem-->
+
+                        <div class="feedback-content"> <!--EstrelaDs-->
+                            <p>
+                                Maria Nazaré <!--Nome-->
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p> <!--Avaliação-->
+                                Maravilhoso! A moqueca de camarão é divina, com tempero perfeito e camarões frescos que derretem na boca. Uma explosão de sabores!
+                            </p>
+                        </div>
+                    </div> 
+                    <div class="feedback"> <!--Feedback 2-->
+                        <img src="src/images/avatar2.png" class="feedback-avatar" alt=""> <!--Imagem-->
+                        <div class="feedback-content"> <!--Estrelas-->
+                            <p>
+                                Carlos Vinicios <!--Nome-->
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p> <!--Avaliação-->
+                                Incrível! O risoto de cogumelos é de outro mundo, com uma cremosidade única e um aroma que invade a mesa. É, sem dúvida, o melhor que já comi!
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+                
+                <button class="btn-default"> <!--Botão padrão-->
+                    Ver mais avaliações
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer> <!--Define o rodapé-->
+        <img src="src/images/wave.svg" alt=""> <!--Wave-->
+
+        <div id="footer_items">  <!--Items do rodapé-->
+            <span id="copyright"> <!--Copyright - © 2026 Anunciatto-->
+                &copy 2026 Anunciatto
+            </span>
+
+            <span id="copyright-message"> <!--Copyright Menssagem-->
+                Jesus é o único caminho🤍
+            </span>
+
+            <div class="social-media-buttons"> <!--Ícone - Social-->
+                    <a href="https://wa.me/5551987786557"> <!--Link - WhatsApp-->
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a> 
+
+                    <a href=""> <!--Link - Instagram-->
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    
+                    <a href=""> <!--Link - Facebook-->
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                </div>
+        </div>
+    </footer>
+    <script src="src/javascript/script.js"></script> <!--Link - Javascript-->
+</body>
+</html>
